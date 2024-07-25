@@ -1,0 +1,61 @@
+@tailwind base;
+@layer base {
+  h1 {
+    @apply text-4xl;
+    @apply my-3;
+    @apply mt-8;
+    @apply font-bold;
+  }
+  h2 {
+    @apply text-3xl;
+    @apply my-3;
+    @apply mt-8;
+    @apply font-bold;
+  }
+  h3 {
+    @apply text-2xl;
+    @apply my-3;
+    @apply mt-8;
+    @apply font-bold;
+  }
+  h4 {
+    @apply text-xl;
+    @apply my-3;
+    @apply mt-8;
+    @apply font-bold;
+  }
+  h5 {
+    @apply text-lg;
+    @apply my-3;
+    @apply mt-8;
+    @apply font-bold;
+  }
+  h6 {
+    @apply text-base;
+    @apply my-3;
+    @apply mt-8;
+    @apply font-bold;
+  }
+  ul, ol{
+    @apply ml-14;
+    @apply mb-6;
+  }
+  ol > li{
+    @apply list-decimal;
+  }
+  ul > li{
+    @apply list-disc;
+    
+  }
+  li{
+    @apply text-xl;
+    @apply py-2;
+  }
+  p{
+    @apply text-lg;
+    @apply my-4;
+  }
+}
+@tailwind components;
+@tailwind utilities;
+  

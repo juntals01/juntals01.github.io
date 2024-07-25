@@ -1,0 +1,31 @@
+version: "3.5"
+services:
+  aboutme:
+    build:
+      context: ./apps/aboutme
+      dockerfile: Dockerfile
+      target: ${ABOUTME_BUILD:-dev}
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./apps/aboutme:/app
+    command: ${ABOUTME_RUN:-dev}
+    networks:
+      - allnet
+  freevpssetup:
+    build:
+      context: ./apps/freevpssetup
+      dockerfile: Dockerfile
+      target: ${ABOUTME_BUILD:-dev}
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./apps/freevpssetup:/app
+    command: ${ABOUTME_RUN:-dev}
+    networks:
+      - allnet
+networks:
+  allnet:
+    name: allnet
+    external: true
+
